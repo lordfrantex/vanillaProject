@@ -1,0 +1,186 @@
+
+.grid{
+  max-width: 800px;
+
+  margin: 30px auto;
+  border: 1px solid gray;
+  border-radius: .7rem;
+  padding: .7rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(120px,auto);
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+.grid>div{
+  border: 1px solid gray;
+  display: grid;
+  place-items: center;
+  padding: .5rem;
+  border-radius: .7rem;
+  cursor: pointer;
+}
+.grid-1{
+  grid-column: span 2;
+}
+.grid-3{
+  grid-row: span 2;
+}
+.grid-4{
+  grid-column: span 2;
+}
+@media (max-width:656px) {
+  .grid-4{
+    grid-column: span 1;
+  }
+  .grid-3{
+    grid-row: span 3;
+  }
+  .grid-6{
+    grid-column: span 2;
+  }
+}
+@media (max-width:400px) {
+
+.grid>div{
+  grid-row: span 1;
+  grid-column: span 1;
+}
+}
+
+
+// works
+section.portfolio{
+  max-width: 800px;
+margin:50px auto;
+}
+
+.works{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+  grid-auto-rows: 330px;
+  grid-gap: 1rem;
+}
+.works>div{
+  border-radius: .5rem;
+  overflow: hidden;
+  padding: .75rem;
+  border: 1px solid red;
+
+
+}
+.works>div .image img{
+  width: 100%;
+  display: block;
+}
+
+.works>div .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+// resume
+
+.resume{
+  max-width: 800px;
+  margin: 200px auto;
+  // border: 1px solid grey;
+}
+
+.resume .container{
+  display: flex;
+ 
+  max-height: 700px;
+}
+
+@media(max-width:600px){
+  .resume .container{
+
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.resume .resume-nav{
+position: relative;
+z-index: 1;
+// flex: 1 1 700px;
+flex: 1;
+}
+
+.resume .resume-content{
+position: relative;
+
+max-height: 400px;
+flex: 3;
+// flex: 1 1 auto;
+  overflow: auto;
+
+ 
+}
+.resume-content::-webkit-scrollbar{
+  width: 7px;
+}
+.resume-content::-webkit-scrollbar-thumb{
+  background-color: tomato;
+  border-radius: 5px;
+}
+.resume-content::-webkit-scrollbar-track{
+  background-color: rgb(202, 202, 209);
+  border-radius: 5px;
+}
+
+
+
+.resume-content>div{
+ min-height: 100%;
+ border: 1px solid tomato;
+ min-height: 400px;  
+ border-radius: .5rem;
+ display: grid;
+place-items: center;
+}
+
+.resume .resume-nav::after {
+content: '';
+background-color: tomato;
+z-index: -1;
+position: absolute;
+width: 40px;
+height: 100%;
+top: 0;
+}
+
+.navRef{
+  display: flex;
+  height: 40px;
+  padding: 0 15px ;
+  background: transparent;
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+}
+.navRef .fill{
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  background-color: rgb(170, 112, 112);
+border-radius: 50px;
+transition: .5s ease-in-out;
+}
+ .navRef .active{
+  width: 100%;
+  background-color: tomato;
+
+}
+.title p{
+text-align: center;
+margin: 20px 0;
+color: tomato;
+}

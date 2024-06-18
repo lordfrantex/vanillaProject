@@ -1,0 +1,21 @@
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+
+    box-shadow: inset 0px -2px 7px 0px rgb(235, 233, 232);
+
+    nav{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        ul{
+            display: flex;
+            gap: 36px;
+           
+        }
+    }
+    
+}
