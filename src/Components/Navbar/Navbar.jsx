@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 const Header = () => {
     return (
+
         <header className='container'>
             <nav>
                 <Link href='/'>SKELETON<sup>style</sup></Link>
