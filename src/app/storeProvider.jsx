@@ -7,7 +7,7 @@ const { useRef } = require("react")
 const { Provider } = require("react-redux")
 counterSlice
 
-export default function storeProvider({ count, children }) {
+export default function StoreProvider({ count, children }) {
     const storeRef = useRef()
     if (!storeRef.current) {
         storeRef.current = makeStore()
