@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import './dashboard.scss'
 
 
-export default function layout({ children }) {
+export default function RootLayout({ children }) {
     const navLinkRef = useRef()
     const navBarRef = useRef()
     const navResponsiveContainer = useRef()
